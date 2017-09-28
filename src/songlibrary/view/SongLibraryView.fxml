@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="songlibrary.controller.SongLibraryController">
+	
+	<Text text="Song Details" textAlignment="CENTER" wrappingWidth="520.0" GridPane.columnSpan="4">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font></Text>
+	<Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="2">
+      <padding>
+         <Insets left="5.0" />
+      </padding>
+      <font>
+         <Font size="14.0" />
+      </font></Label>
+	<Text fx:id="nameDisplay" wrappingWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+	<Label text="Artist:" GridPane.columnIndex="2" GridPane.rowIndex="2">
+      <padding>
+         <Insets left="5.0" />
+      </padding>
+      <font>
+         <Font size="14.0" />
+      </font></Label>
+	<Text fx:id="artistDisplay" wrappingWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+	<Label text="Album:" GridPane.columnIndex="0" GridPane.rowIndex="3">
+      <padding>
+         <Insets left="5.0" />
+      </padding>
+      <font>
+         <Font size="14.0" />
+      </font></Label>
+	<Text fx:id="albumDisplay" wrappingWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+	<Label text="Year:" GridPane.columnIndex="2" GridPane.rowIndex="3">
+      <padding>
+         <Insets left="5.0" />
+      </padding>
+      <font>
+         <Font size="14.0" />
+      </font></Label>
+	<Text fx:id="yearDisplay" wrappingWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+   <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowIndex="4">
+      <children>
+         <ListView fx:id="listView" layoutX="140.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+      </children>
+   </AnchorPane>
+   <Button minWidth="60.0" mnemonicParsing="false" onAction="#addSong" text="Add" textAlignment="CENTER" GridPane.columnSpan="2" GridPane.rowIndex="5">
+      <GridPane.margin>
+         <Insets bottom="5.0" left="35.0" top="5.0" />
+      </GridPane.margin>
+   </Button>
+   <Button minWidth="60.0" mnemonicParsing="false" onAction="#editSong" text="Edit" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="5">
+      <GridPane.margin>
+         <Insets bottom="5.0" left="105.0" top="5.0" />
+      </GridPane.margin>
+   </Button>
+   <Button minWidth="60.0" mnemonicParsing="false" onAction="#deleteSong" text="Delete" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="5">
+      <GridPane.margin>
+         <Insets bottom="5.0" left="35.0" top="5.0" />
+      </GridPane.margin>
+   </Button>
+   <Button minWidth="60.0" mnemonicParsing="false" onAction="#cancelAction" text="Cancel" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="5">
+      <GridPane.margin>
+         <Insets bottom="5.0" left="100.0" top="5.0" />
+      </GridPane.margin>
+   </Button>
+   <Label text="Artist:*" GridPane.columnIndex="2" GridPane.rowIndex="6">
+      <GridPane.margin>
+         <Insets left="5.0" />
+      </GridPane.margin>
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <Label text="Name:*" GridPane.rowIndex="6">
+      <font>
+         <Font size="14.0" />
+      </font>
+      <GridPane.margin>
+         <Insets left="5.0" />
+      </GridPane.margin>
+   </Label>
+   <Label text="Album:" GridPane.rowIndex="7">
+      <GridPane.margin>
+         <Insets left="5.0" />
+      </GridPane.margin>
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <Label text="Year:" GridPane.columnIndex="2" GridPane.rowIndex="7">
+      <font>
+         <Font size="14.0" />
+      </font>
+      <GridPane.margin>
+         <Insets left="5.0" />
+      </GridPane.margin>
+   </Label>
+   <TextField fx:id="nameEntry" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+   <TextField fx:id="artistEntry" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+   <TextField fx:id="albumEntry" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+   <TextField fx:id="yearEntry" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="* indicates required field" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+   <columnConstraints>
+      <ColumnConstraints minWidth="60.0" />
+      <ColumnConstraints minWidth="200.0" />
+      <ColumnConstraints minWidth="60.0" />
+      <ColumnConstraints minWidth="200.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints minHeight="350.0" />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+	
+	
+</GridPane>
+
+
